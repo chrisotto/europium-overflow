@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+  // AJAX new answer form
   $('#new-answer-button').on('click', function(event) {
     event.preventDefault()
 
@@ -15,4 +17,12 @@ $(document).ready(function() {
       $('#new-answer-button').css('display', 'none')
     });
   });
+
+  // AJAX logout
+  $("a#logout").on("click", function(event) {
+    event.preventDefault();
+    $.post($(this).attr('href'), '_method=delete').done(function(responseHref) {
+      window.location.replace(responseHref);
+    })
+  })
 });
