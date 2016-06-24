@@ -1,16 +1,16 @@
 # Show form for creating a new answer
 get '/questions/:id/answers/new' do
-  @question = Question.find(params[:question_id])
+  @question = Question.find(params[:id])
   erb :'answers/new'
 end
 
 # Submit form and create a new answer
-post '/questions/:id/answers' do
+post '/questions/:id' do
   @question = Question.find(params[:id])
   @answer = Answer.new(user_id: session[:user_id], question_id: @question.id, content: params[:content])
 
   if @answer.save
-    redirect "/questions/#{@question.id}/answers"
+    redirect "/questions/#{@question.id}"
   else
     @errors = @question.errors.full_messages
     erb :'answers/new'

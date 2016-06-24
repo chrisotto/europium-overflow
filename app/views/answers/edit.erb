@@ -11,16 +11,16 @@
   </div>
 
   <!-- form for editing answer -->
-  <form id="edit-answer-form" method="POST" action='/questions/<%= @question.id %>'>
+  <form id="edit-answer-form" method="POST" action='/questions/<%= @question.id %>/answers/<%= @answer.id %>'>
     <input type="hidden" name="_method" value="PUT">
 
     <label for="content">Content</label>
-    <textarea form="edit-answer-form" name="content" rows="10" cols="50" placeholder='Share your wisdom here...'></textarea>
+    <textarea form="edit-answer-form" name="content" rows="10" cols="50"><%= @answer.content %></textarea>
     <input type="submit" value="Submit Changes">
   </form>
 
   <!-- button for deleting answer -->
-  <form id="delete-answer-form" method="POST" action='/questions/<%= @question.id %>'>
+  <form id="delete-answer-form" method="POST" action='/questions/<%= @question.id %>/answers/<%= @answer.id %>'>
     <input type="hidden" name="_method" value="DELETE">
     <input type="submit" value="Delete Answer">
   </form>
