@@ -1,4 +1,4 @@
-<div id="answer-form-container">
+<div class="container">
   <h2>Answer this question:</h2>
   <div class="errors">
     <% if @errors %>
@@ -10,7 +10,7 @@
     <% end %>
   </div>
 
-<form id="answer-form" method="POST" action='/questions/<%= @question.id %>'>
+  <form id="answer-form" method="POST" action='/questions/<%= @question.id %>'>
 
     <label for="content">Content</label>
     <textarea form="answer-form" name="content" rows="10" cols="50" placeholder='Share your wisdom here...'></textarea>

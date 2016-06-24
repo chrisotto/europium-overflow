@@ -20,7 +20,8 @@
       <% end %>
     </div>
   <% end %>
-</div>
-<form action="/questions/<%= @question.id %>/answers/new">
+  <form id="new-answer-button" action="/questions/<%= @question.id %>/answers/new">
     <input type="submit" value="Add Your Answer">
-</form>
+  </form>
+</div>
+
