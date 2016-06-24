@@ -5,6 +5,25 @@
   <% @question.answers.each do |answer| %>
     <div class="answer">
       <p><%= answer.content %></p>
+      <% if current_user == answer.user %>
+        <!-- button to edit answer -->
+        <form action="/questions/<%= @question.id %>/answers/<%= answer.id %>/edit">
+          <input type="submit" value="Edit Your Answer">
+        </form>
+
+        <!-- button to delete answer -->
+        <form id="delete-answer-form" method="POST" action='/questions/<%= @question.id %>/answers/<%= answer.id %>'>
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="submit" value="Delete Answer">
+        </form>
+      <% end %>
     </div>
   <% end %>
+
+  <% if current_user %>
+    <form id="new-answer-button" action="/questions/<%= @question.id %>/answers/new">
+      <input type="submit" value="Add Your Answer">
+    </form>
+  <% end %>
 </div>
+
