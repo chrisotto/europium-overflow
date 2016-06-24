@@ -6,4 +6,9 @@
       <h3><a href="/questions/<%= question.id %>"><%= question.title %></a></h3>
     </div>
   <% end %>
+
+  <% if current_user %>
+    <a id="new_question" href="/questions/new">Post New Question!</a>
+  <% end %>
+
 </div>

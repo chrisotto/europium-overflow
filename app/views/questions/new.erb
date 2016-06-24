@@ -1,0 +1,14 @@
+<div class="container">
+  <form method="post" action="/questions">
+  <input type="hidden" name="question[user_id]" value="<%= current_user.id %>">
+    <div>
+      <input type="text" name="question[title]" placeholder="Title" required>
+    </div>
+    <div>
+      <textarea name="question[content]" rows="4" cols="60" placeholder="Content" required></textarea>
+    </div>
+    <div>
+      <input type="submit" value="Post New Question">
+    </div>
+  </form>
+</div>
