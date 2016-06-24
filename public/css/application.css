@@ -1,3 +1,35 @@
 header nav {
   float: right;
 }
+
+.container {
+  margin: 20px auto;
+  width: 80%;
+  padding: 0px 20px 20px 20px;
+}
+
+h2 {
+  border-bottom: 2px solid black;
+}
+
+h3.answers_header {
+  border-bottom: 1px solid gray;
+}
+
+
+.question, .answer {
+  border-bottom: 1px solid lightgray;
+}
+
+a {
+  text-decoration: none
+}
+
+#new_question {
+  border: 1px solid gray;
+  background-color: lightgray;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 125%;
+  float: right;
+}
