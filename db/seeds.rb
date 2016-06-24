@@ -7,27 +7,27 @@ end
 user = User.create!(username: 'Carrie', email: 'carrie@dbc.com', password: '123')
 rand(1..3).times do
   title_text = Faker::Hacker.adjective.upcase + " " + Faker::Hacker.adjective + " " + Faker::Hacker.verb + " " + Faker::Hacker.noun
-  user.questions.create!(title: titleText & "?", content: "What's up with the #{title_text}!?? I can't figure it out. Maybe someone can help????",)
+  user.questions.create!(title: title_text & "?", content: "What's up with the #{title_text}!?? I can't figure it out. Maybe someone can help????",)
 end
 user = User.create!(username: 'Chris', email: 'chris@dbc.com', password: '123')
 rand(1..3).times do
   title_text = Faker::Hacker.adjective.upcase + " " + Faker::Hacker.adjective + " " + Faker::Hacker.verb + " " + Faker::Hacker.noun
-  user.questions.create!(title: titleText & "?", content: "What's up with the #{title_text}!?? I can't figure it out. Maybe someone can help????",)
+  user.questions.create!(title: title_text & "?", content: "What's up with the #{title_text}!?? I can't figure it out. Maybe someone can help????",)
 end
 user = User.create!(username: 'Christel', email: 'christel@dbc.com', password: '123')
 rand(1..3).times do
   title_text = Faker::Hacker.adjective.upcase + " " + Faker::Hacker.adjective + " " + Faker::Hacker.verb + " " + Faker::Hacker.noun
-  user.questions.create!(title: titleText & "?", content: "What's up with the #{title_text}!?? I can't figure it out. Maybe someone can help????",)
+  user.questions.create!(title: title_text & "?", content: "What's up with the #{title_text}!?? I can't figure it out. Maybe someone can help????",)
 end
 user = User.create!(username: 'Ed', email: 'ed@dbc.com', password: '123')
 rand(1..3).times do
   title_text = Faker::Hacker.adjective.upcase + " " + Faker::Hacker.adjective + " " + Faker::Hacker.verb + " " + Faker::Hacker.noun
-  user.questions.create!(title: titleText & "?", content: "What's up with the #{title_text}!?? I can't figure it out. Maybe someone can help????",)
+  user.questions.create!(title: title_text & "?", content: "What's up with the #{title_text}!?? I can't figure it out. Maybe someone can help????",)
 end
 user = User.create!(username: 'Mikael', email: 'mikael@dbc.com', password: '123')
 rand(1..3).times do
   title_text = Faker::Hacker.adjective.upcase + " " + Faker::Hacker.adjective + " " + Faker::Hacker.verb + " " + Faker::Hacker.noun
-  user.questions.create!(title: titleText & "?", content: "What's up with the #{title_text}!?? I can't figure it out. Maybe someone can help????",)
+  user.questions.create!(title: title_text & "?", content: "What's up with the #{title_text}!?? I can't figure it out. Maybe someone can help????",)
 end
 
 # Create answers
