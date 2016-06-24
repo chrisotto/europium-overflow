@@ -12,7 +12,7 @@ h2 {
   border-bottom: 2px solid black;
 }
 
-h3 {
+h3.answers_header {
   border-bottom: 1px solid gray;
 }
 
@@ -23,4 +23,13 @@ h3 {
 
 a {
   text-decoration: none
+}
+
+#new_question {
+  border: 1px solid gray;
+  background-color: lightgray;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 125%;
+  float: right;
 }
