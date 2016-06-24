@@ -1,0 +1,26 @@
+header nav {
+  float: right;
+}
+
+.container {
+  margin: 20px auto;
+  width: 80%;
+  padding: 0px 20px 20px 20px;
+}
+
+h2 {
+  border-bottom: 2px solid black;
+}
+
+h3 {
+  border-bottom: 1px solid gray;
+}
+
+
+.question, .answer {
+  border-bottom: 1px solid lightgray;
+}
+
+a {
+  text-decoration: none
+}

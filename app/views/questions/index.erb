@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>All the questions!</h3>
+
+  <% @questions.each do |question| %>
+    <div class="question">
+      <h3><a href="/questions/<%= question.id %>"><%= question.title %></a></h3>
+    </div>
+  <% end %>
+</div>
