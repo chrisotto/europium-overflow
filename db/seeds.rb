@@ -3,7 +3,6 @@
   User.create!(username: Faker::Name.first_name , email: Faker::Internet.email, password: '123')
 end
 
-
 # Create 5 users (team Europium); each creates 1-3 questions;
 user = User.create!(username: 'Carrie', email: 'carrie@dbc.com', password: '123')
 rand(1..3).times do
@@ -31,7 +30,7 @@ rand(1..3).times do
   user.questions.create!(title: titleText & "?", content: "What's up with the #{title_text}!?? I can't figure it out. Maybe someone can help????",)
 end
 
-# Create questions
+# Create answers
 questions_count = Questions.all.length
 questions_count.times do
   Answer.create!(content: Faker::Hacker.say_something_smart, user_id: rand(1..25), question_id: rand(1..questions_count))
