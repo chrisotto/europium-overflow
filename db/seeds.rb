@@ -34,5 +34,5 @@ end
 # Create questions
 questions_count = Questions.all.length
 questions_count.times do
-  Question.create!()
+  Answer.create!(content: Faker::Hacker.say_something_smart, user_id: rand(1..25), question_id: rand(1..questions_count))
 end
