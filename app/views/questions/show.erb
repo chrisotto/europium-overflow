@@ -5,8 +5,7 @@
   <% @question.answers.each do |answer| %>
     <div class="answer">
       <p><%= answer.content %></p>
-
-      <% if current_user == answer.user_id %>
+      <% if current_user == answer.user %>
         <!-- button to edit answer -->
         <form action="/questions/<%= @question.id %>/answers/<%= answer.id %>/edit">
           <input type="submit" value="Edit Your Answer">
@@ -20,8 +19,11 @@
       <% end %>
     </div>
   <% end %>
-  <form id="new-answer-button" action="/questions/<%= @question.id %>/answers/new">
-    <input type="submit" value="Add Your Answer">
-  </form>
+
+  <% if current_user %>
+    <form id="new-answer-button" action="/questions/<%= @question.id %>/answers/new">
+      <input type="submit" value="Add Your Answer">
+    </form>
+  <% end %>
 </div>
 

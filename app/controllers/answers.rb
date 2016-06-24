@@ -11,7 +11,7 @@ end
 # Submit form and create a new answer
 post '/questions/:id' do
   @question = Question.find(params[:id])
-  @answer = Answer.new(user_id: session[:user_id], question_id: @question.id, content: params[:content])
+  @answer = Answer.new(user_id: session[:id], question_id: @question.id, content: params[:content])
 
   if @answer.save
     redirect "/questions/#{@question.id}"
