@@ -16,7 +16,7 @@
       <% if current_user %>
         <%= current_user.username %> | <a id="logout" href="/session/<%= session[:id] %>">Log Out</a>
       <% else %>
-        <a href="/sessions/new">Login</a> | <a href="users/new">Sign Up</a>
+        <a href="/sessions/new">Login</a> | <a href="/users/new">Sign Up</a>
       <% end %>
     </nav>
   </header>
