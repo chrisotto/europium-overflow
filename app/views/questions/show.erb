@@ -1,0 +1,10 @@
+<div class="container">
+  <h2><%= @question.title %></h2>
+  <p><%= @question.content %></p>
+  <h3>Answers:</h3>
+  <% @question.answers.each do |answer| %>
+    <div class="answer">
+      <p><%= answer.content %></p>
+    </div>
+  <% end %>
+</div>
