@@ -1,0 +1,27 @@
+<div id="edit-answer-form-container">
+  <h2>Edit your answer:</h2>
+  <div class="errors">
+    <% if @errors %>
+      <ul>
+      <% @errors.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+      </ul>
+    <% end %>
+  </div>
+
+  <!-- form for editing answer -->
+  <form id="edit-answer-form" method="POST" action='/questions/<%= @question.id %>'>
+    <input type="hidden" name="_method" value="PUT">
+
+    <label for="content">Content</label>
+    <textarea form="edit-answer-form" name="content" rows="10" cols="50" placeholder='Share your wisdom here...'></textarea>
+    <input type="submit" value="Submit Changes">
+  </form>
+
+  <!-- button for deleting answer -->
+  <form id="delete-answer-form" method="POST" action='/questions/<%= @question.id %>'>
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete Answer">
+  </form>
+</div>
