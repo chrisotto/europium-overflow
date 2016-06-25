@@ -5,7 +5,7 @@
   <!-- question's comments -->
   <% @question.comments.each do |comment| %>
     <div class="comments">
-      <p>!!!!!!!!!!<%= comment.content %></p>
+      <p><%= comment.content %></p>
     </div>
   <% end %>
   <% if current_user %>
